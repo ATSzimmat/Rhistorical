@@ -12,7 +12,8 @@ If historians want to answer a research question, they first have the task of co
 ## How R historical can simplify a historian's daily work
 When a historian gathers his sources, he is usually faced with an overwhelming mountain of sources, spends time reading through them, and then creates a selection of sources, which he then interprets, criticizes, and evaluates. However, he encounters several problems. Finding the right sources and even accessing a reliable text of the sources and their translation can take ages, and efficiently managing and narrowing down the masses of sources is a laborious process.
 R historical is intended as a kind of source manager that aims to alleviate these problems as much as possible and enable the historian to quickly and efficiently build a dataframe from his sources, which can then be further investigated using all the text analysis options R has to offer. Appropriate analysis tools might be added to R historical in the future to further accelerate the workflow.
-## Wie R historical funktioniert
+
+## How R historical works
 When you install R historical, in addition to the functions, a dataset called the_sources is added. This provides the text of all the source excerpts available in the_sources along with corresponding metadata.
 
 --Tabelle--
