@@ -1,14 +1,14 @@
 #' Create a filtered source dataframe
 #'
 #' This function filters the dataset the_sources according to the specified parameters.
-#' If output_text = TRUE, the result text is provided formatted as output, ready to be processed into a source compilation document
+#' If output_text = TRUE, the result text is provided formatted as output, ready to be incorporated into a source paper document
 #'
 #' @param author The author to filter sources by (e.g. "Xenophon")
 #' @param context The historical context (e.g. "Corinthian War")
 #' @param event_type The event type (e.g. "battle")
 #' @param event The exact event (e.g. "Battle1")
 #' @param work The work from which you want to have source excerpts
-#' @param citation The citation (e.g. "Citation1")
+#' @param citation The citation (e.g. "Citation1") of the respective source excerpts
 #' @param output_text If TRUE the result text is provided formatted as output
 #'
 #' @return A filtered source dataframe (if utput_text = FALSE)
