@@ -22,36 +22,58 @@ Wenn auf diese Weise schnell und effizient eine Quellenauswahl in Form eines Dat
 
 ## Die Funktionen
 ### hist_sources
-- Hinweise
+- filters the dataset the_sources according to the specified parameters.
+- If output_text = TRUE, the result text is provided formatted as output, ready to be incorporated into a source paper document.
+- Example
 ```r
-code
+# All source excerpts from Xenophon on the Corinthian War as dataframe
+Xenophon_Corinthian <- hist_sources(author = "Xenophon", context = "Corinthian War", output_text = FALSE)
+# As source compilation
+hist_sources(author = "Xenophon", context = "Corinthian War", output_text = TRUE)
 ```
 ### hist_include
-- Hinweise
+- adds your own source excerpts with the corresponding metadata as a dataframe to the dataset the_sources.
+- However, the columns of your dataset must match those of the_sources and must be in the same order and with the same variable types.
 ```r
-code
+# Some example data
+new_data <- data.frame(context = "Corinthian War", event = "NewBattle1", author = "Plutarch", work = "Work3", citation = "NewCitation6", text_ID = 15, text = "The fleets clashed near Cnidus.", event_type = "battle", stringsAsFactors = FALSE)
+# Don't forget to define the_sources as your own datafrane before working with hist_include
+the_sources <- the_sources
+# Adjust the column data types to match those of the_sources
+new_data$context <- as.factor(new_data$context)
+new_data$event_type <- as.factor(new_data$event_type)
 ```
 ### hist_contain
-- Hinweise
+- filters a source dataframe created with hist_sources (text_output set on FALSE) by the occurrence of source excerpts containing specific words.
+- Use + to require multiple words in the same text (e.g. "king+battle"). Multiple arguments represent an OR condition. Case sensitivity is ignored.
 ```r
-code
+# Example source dataframe created with hist_sources
+Xenophon_Corinthian <- hist_sources(author="Xenophon",context="Corinthian War", output_text = FALSE)
+# Only source excerpts containing "king+battle" or "Thebans"
+hist_contain(Xenophon_Corinthian, "king+battle","Thebans")
 ```
 ### hist_delete
+- deletes specific rows from a source dataframe created with hist_sources (text_output set on FALSE), identified by their text_ID values.
 ```r
-code
+# Example source dataframe created with hist_sources
+Xenophon_Corinthian <- hist_sources(author="Xenophon",context="Corinthian War", output_text = FALSE)
+# Delete the source excerpts with IDs 5 and 14
+hist_delete(Xenophon_Corinthian, ID = c(5, 14))
 ```
-- Hinweise
 ### hist_text
+- converts a source dataframe that you created with hist_sources into a structured source compilation ready to be incorporated into a source paper document.
 ```r
-code
+# Example source dataframe created with hist_sources
+Xenophon_Corinthian <- hist_sources(author="Xenophon", context="Corinthian War", output_text = FALSE)
+# Output the source-paper
+hist_text(Xenophon_Corinthian)
 ```
-- Hinweise
 
 ## Installation
 
 You can install the package via 
 ```r
-remotes::install.github("ATSzimmat/Rhistorical")
+remotes::install_github("ATSzimmat/Rhistorical")
 ```
 
 
