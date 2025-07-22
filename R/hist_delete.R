@@ -1,6 +1,6 @@
 #' Delete unintended source excerpts
 #'
-#' This functiondeletes specific rows from a source dataframe created with hist_sources,
+#' This function deletes specific rows from a source dataframe created with hist_sources (text_output set on FALSE),
 #' identified by their text_ID values.
 #'
 #' @param filtered_sources Your current source dataframe
