@@ -30,3 +30,4 @@ hist_include <- function(new_data) {
 
   the_sources <<- bind_rows(the_sources, new_data)
 }
+
