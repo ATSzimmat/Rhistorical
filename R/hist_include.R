@@ -2,8 +2,7 @@
 #'
 #' With this function, you can add your own source excerpts with the corresponding metadata
 #' as a dataframe to the dataset the_sources. However, the columns of your dataset must match those of
-#' the_sources and must be in the same order and with the same variable types. Please type the_sources <- the_sources
-#'before you use hist_contain, otherwise the function will not work.
+#' the_sources and must be in the same order and with the same variable types.
 #'
 #' @param new_data Your dataframe with the new source excerpts
 #' @returns the_sources with the new source excerpts
