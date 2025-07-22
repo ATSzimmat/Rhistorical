@@ -1,7 +1,7 @@
 #' Create a filtered source dataframe
 #'
 #' This function filters the dataset the_sources according to the specified parameters.
-#' If output_text = TRUE, the result text is provided formatted as output, ready to be processed into a source compilation
+#' If output_text = TRUE, the result text is provided formatted as output, ready to be processed into a source compilation document
 #'
 #' @param author The author to filter sources by (e.g. "Xenophon")
 #' @param context The historical context (e.g. "Corinthian War")
