@@ -4,7 +4,8 @@
   <p><em>by ATSzimmat</em></p>
 </div>
 
-Welcome to the package R historical - a new tool that wants to facilitate work with primary sources of history in R.
+Welcome to the package R historical - a new tool that wants to facilitate work with primary sources of history in R!
+
 Um Informationen über die Vergangenheit zu erhalten, ist es unumgänglich sich die Hinweise anzusehen, die die Zeiten überdauert haben und uns heute noch zur Verfügung stehen. Diese Hinweise können in vielen Formen auftreten - als Inschriften an Steinen, als alte Ruinen oder als Texte, die über die damalige Zeit, manchmal sogar als zeitzeugen, berichten. Diese Hinweise (oder Primärquellen) werden in den Historical sciences einfach nur als Quellen bezeichnet und jegliche "Geschichtsbücher", die über diese Quellen geschrieben wurden, nennt man (Forschungs-) Literatur.
 Wenn ein Historiker eine Fragestellung beantworten möchte hat er zuerst die Aufgabe die Quellen zu sammeln, die für seine Fragestellung relevant sind und dann unter Berücksichtigung der bsiherigen Literatur wissenschaftlich auszuwerten. Im Anschluss möchte man meist die Quellen als geordneten Text mit der korrekten Zitation der Quellen (ein sogenanntes Quellenpapier) erstellen um seine Quellen präsentieren zu können. Doch der Prozess die Quellen zu finden, sie zu verwalten und schlussendlich das Quellenpapier zu erstellen kann leicht sehr träge und zeitaufwendig werden. Der Autor dieses Packages studiert zurzeit Geschichte im Hauptfach und Statistik und Data Science als Nebenfach an der LMU München und stand selbst schon mehrere Male vor dieser Herausforderung.
 
@@ -19,9 +20,15 @@ In der Zukunft sollen dort alle existenten Quellen gespeichert werden, in dieser
 Diese Quellenauswahl kann man mit hist_include um eigene Quellen erweitern, die noch nicht als Teil von the_sources geliefert werden. Auf der anderen Seite kann man diese Auswahl auch mit 2 anderen Funktionen von R historical einschränken. Mit hist_contain kann man die Quellenauswahl auf Quellen beschränken, die bestimmte Wörter enthalten und mit hist_delete kanm man ungewollte Quellenstellen direkt aus seiner Quellenauswahl entfernen.
 Wenn auf diese Weise schnell und effizient eine Quellenauswahl in Form eines Dataframes erstellt hat, kann man dieses mit hist_text dieses Dataframe zu einer Auswahl der Quellen als strukturierter Volltext umwandeln. Alternativ kann man jedoch bereits mit hist_sources sich den Text der Quellen ausgeben lassen.
 
+## Die Funktionen
+
+
 ## Installation
 
-You can install the package via remotes::install.github("ATSzimmat/Rhistorical")
+You can install the package via 
+```r
+remotes::install.github("ATSzimmat/Rhistorical")
+```
 
 
 
