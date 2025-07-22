@@ -16,7 +16,7 @@ R historical is intended as a kind of source manager that aims to alleviate thes
 ## How R historical works
 When you install R historical, in addition to the functions, a dataset called the_sources is added. This provides the text of all the source excerpts available in the_sources along with corresponding metadata.
 
---Tabelle--
+<img src="images/Example_data.jpeg" width="400" style="float: right; margin-left: 20px;">
 
 In the future, hopefully all existing sources will be stored there; however, in this initial version, the dataset only contains a few made-up source excerpts with placeholder metadata. Historians can use the hist_sources() function to limit the_sources to a selection of sources that meet certain conditions — e.g. only source excerpts from a specific author or a specific event. If the_sources already contains all the sources you need for your research question, this saves the historian a considerable amount of work. Furthermore, the_sources provides a standardized format for storing source excerpts, preventing the uncontrolled creation of multiple source collections (each with its own concept).
 
@@ -38,6 +38,7 @@ hist_sources(author = "Xenophon", context = "Corinthian War", output_text = TRUE
 ### hist_include
 - adds your own source excerpts with the corresponding metadata as a dataframe to the dataset the_sources.
 - However, the columns of your dataset must match those of the_sources and must be in the same order and with the same variable types.
+- Example
 ```r
 # Some example data
 new_data <- data.frame(context = "Corinthian War", event = "NewBattle1", author = "Plutarch", work = "Work3", citation = "NewCitation6", text_ID = 15, text = "The fleets clashed near Cnidus.", event_type = "battle", stringsAsFactors = FALSE)
@@ -50,6 +51,7 @@ new_data$event_type <- as.factor(new_data$event_type)
 ### hist_contain
 - filters a source dataframe created with hist_sources (text_output set on FALSE) by the occurrence of source excerpts containing specific words.
 - Use + to require multiple words in the same text (e.g. "king+battle"). Multiple arguments represent an OR condition. Case sensitivity is ignored.
+- Example
 ```r
 # Example source dataframe created with hist_sources
 Xenophon_Corinthian <- hist_sources(author="Xenophon",context="Corinthian War", output_text = FALSE)
@@ -58,6 +60,7 @@ hist_contain(Xenophon_Corinthian, "king+battle","Thebans")
 ```
 ### hist_delete
 - deletes specific rows from a source dataframe created with hist_sources (text_output set on FALSE), identified by their text_ID values.
+- Example
 ```r
 # Example source dataframe created with hist_sources
 Xenophon_Corinthian <- hist_sources(author="Xenophon",context="Corinthian War", output_text = FALSE)
@@ -66,6 +69,7 @@ hist_delete(Xenophon_Corinthian, ID = c(5, 14))
 ```
 ### hist_text
 - converts a source dataframe that you created with hist_sources into a structured source compilation ready to be incorporated into a source paper document.
+- Example
 ```r
 # Example source dataframe created with hist_sources
 Xenophon_Corinthian <- hist_sources(author="Xenophon", context="Corinthian War", output_text = FALSE)
