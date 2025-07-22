@@ -17,3 +17,6 @@ Imports:
     stringr
 URL: https://github.com/ATSzimmat/Rhistorical
 BugReports: https://github.com/ATSzimmat/Rhistorical/issues
+Depends: 
+    R (>= 3.5)
+LazyData: true
