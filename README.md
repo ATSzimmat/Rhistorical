@@ -22,7 +22,7 @@ In the future, hopefully all existing sources will be stored there; however, in 
 This source selection can be expanded with hist_include to include your own sources that are not (yet) provided as part of the_sources. On the other hand, this selection can also be restricted with two other R historical functions. With hist_contain, you can limit the source selection to sources that contain specific words, and with hist_delete, you can remove unwanted source excerpts directly from your source selection.
 Once you've quickly and efficiently created a selection of sources in the form of a dataframe, you can use hist_text to convert this dataframe into a selection of sources as structured full text. Alternatively, you can use hist_sources to output the text of the sources already when you gather your sources.
 
-## Die Funktionen
+## The functions
 ### hist_sources
 - filters the dataset the_sources according to the specified parameters.
 - If output_text = TRUE, the result text is provided formatted as output, ready to be incorporated into a source paper document.
