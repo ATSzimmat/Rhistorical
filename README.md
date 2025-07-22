@@ -26,7 +26,8 @@ Wenn auf diese Weise schnell und effizient eine Quellenauswahl in Form eines Dat
 ## Installation
 
 You can install the package via 
-```r
+```
+{r}
 remotes::install.github("ATSzimmat/Rhistorical")
 ```
 
