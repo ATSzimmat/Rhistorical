@@ -21,13 +21,36 @@ Diese Quellenauswahl kann man mit hist_include um eigene Quellen erweitern, die 
 Wenn auf diese Weise schnell und effizient eine Quellenauswahl in Form eines Dataframes erstellt hat, kann man dieses mit hist_text dieses Dataframe zu einer Auswahl der Quellen als strukturierter Volltext umwandeln. Alternativ kann man jedoch bereits mit hist_sources sich den Text der Quellen ausgeben lassen.
 
 ## Die Funktionen
-
+### hist_sources
+- Hinweise
+```r
+code
+```
+### hist_include
+- Hinweise
+```r
+code
+```
+### hist_contain
+- Hinweise
+```r
+code
+```
+### hist_delete
+```r
+code
+```
+- Hinweise
+### hist_text
+```r
+code
+```
+- Hinweise
 
 ## Installation
 
 You can install the package via 
-```
-{r}
+```r
 remotes::install.github("ATSzimmat/Rhistorical")
 ```
 
