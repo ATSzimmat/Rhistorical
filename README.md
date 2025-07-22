@@ -16,7 +16,7 @@ R historical is intended as a kind of source manager that aims to alleviate thes
 ## How R historical works
 When you install R historical, in addition to the functions, a dataset called the_sources is added. This provides the text of all the source excerpts available in the_sources along with corresponding metadata.
 
-<img src="images/Example_data.jpeg" width="400" style="float: right; margin-left: 20px;">
+<img src="images/Example_data.jpeg" width="1000" style="float: right; margin-left: 20px;">
 
 In the future, hopefully all existing sources will be stored there; however, in this initial version, the dataset only contains a few made-up source excerpts with placeholder metadata. Historians can use the hist_sources() function to limit the_sources to a selection of sources that meet certain conditions — e.g. only source excerpts from a specific author or a specific event. If the_sources already contains all the sources you need for your research question, this saves the historian a considerable amount of work. Furthermore, the_sources provides a standardized format for storing source excerpts, preventing the uncontrolled creation of multiple source collections (each with its own concept).
 
