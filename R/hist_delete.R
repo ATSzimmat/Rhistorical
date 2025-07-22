@@ -12,8 +12,9 @@
 #' @examples
 #' # Example source dataframe created with hist_sources
 #' Xenophon_Corinthian <- hist_sources(author="Xenophon",context="Corinthian War", output_text = FALSE)
-#' #Delete the source excerpts with IDs 5 and 14
+#' # Delete the source excerpts with IDs 5 and 14
 #' hist_delete(Xenophon_Corinthian, ID = c(5, 14))
-  hist_delete <- function(filtered_sources, ID) {
+hist_delete <- function(filtered_sources, ID) {
   ID <- as.character(ID)
-  filtered_sources[!(filtered_sources$text_ID %in% ID), ]}
+  filtered_sources[!(filtered_sources$text_ID %in% ID), ]
+}

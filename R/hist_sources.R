@@ -11,7 +11,7 @@
 #' @param citation The citation (e.g. "Citation1") of the respective source excerpts
 #' @param output_text If TRUE the result text is provided formatted as output
 #'
-#' @return A filtered source dataframe (if utput_text = FALSE)
+#' @return A filtered source dataframe (if output_text = FALSE)
 #' @export
 #'
 #' @examples
@@ -28,21 +28,32 @@ hist_sources <- function(
     work = NULL,
     citation = NULL,
     output_text = FALSE) {
+
   data <- the_sources
+
   if (!is.null(author)) {
-    data <- data[data$author == author, ]}
+    data <- data[data$author == author, ]
+  }
   if (!is.null(context)) {
-    data <- data[data$context == context, ]}
+    data <- data[data$context == context, ]
+  }
   if (!is.null(event_type)) {
-    data <- data[data$event_type == event_type, ]}
+    data <- data[data$event_type == event_type, ]
+  }
   if (!is.null(event)) {
-    data <- data[data$event == event, ]}
+    data <- data[data$event == event, ]
+  }
   if (!is.null(work)) {
-    data <- data[data$work == work, ]}
+    data <- data[data$work == work, ]
+  }
   if (!is.null(citation)) {
-    data <- data[data$citation == citation, ]}
+    data <- data[data$citation == citation, ]
+  }
+
   if (output_text) {
     output <- paste0(data$text_ID, " – ", data$citation, "\n", trimws(data$text))
     cat(paste(output, collapse = "\n\n"))
   } else {
-    return(data)}}
+    return(data)
+  }
+}
